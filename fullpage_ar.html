@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        .details {
+    margin: 0 1em;
+    background-color: #d39851;
+    color: white;
+        .full-screen {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .remove-magin-bottom {
+            margin-bottom: 0;
+        }
+
+        .active-text-color {
+            color: #d39851;
+        }
+
+        .inactive-text-color {
+            color: #4a4a4a;
+        }
+
+        .outer-flex {
+            display: flex;
+            height: 100%;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .location-details-flex {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        .box-styling {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: solid 0.5px #ffffff;
+        }
+
+        .title-styling {
+            font-size: 3em;
+            color: #ffffff;
+        }
+
+        .subtitle-styling {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        .locationtext-styling {
+            font-size: 1em;
+            color: #ffffff;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .location-text-margin {
+            margin-top: 3em;
+        }
+
+        .location-images {
+            margin: 2px;
+        }
+
+        .explore-taj-text {
+            font-size: 1em;
+            color: #ffffff;
+            padding: 1em;
+        }
+
+        .vertically-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .overide-default-props-carousel {
+            position: relative;
+            z-index: 15;
+            width: 5%;
+            padding-left: 0;
+            margin-left: 0;
+            left: 0%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*second part start*/
+
+        .card-container {
+            margin: 0 15px;
+        }
+
+        .card-head-wrap {
+            margin: 95px -15px 35px -15px;
+        }
+
+        .card-head {
+            font-size: 35px;
+            line-height: 1;
+            text-align: left;
+            color: #1b1b1b;
+            padding: 0;
+            /* margin: 95px 0 35px 8.33%;  */
+        }
+
+        .umaid {
+            font-size: 2.5em;
+            line-height: 1;
+            text-align: left;
+            color: #323232;
+            margin: 1em 0 1em 0;
+        }
+        .card-holder{
+            box-shadow: 0 11px 12px 0 rgba(0, 0, 0, 0.05);
+        }
+        .taj-umaid-pic {
+            height: 100%;
+            width: 100%;
+        }
+
+        .booking-info-wrap {
+            margin: 2em 0 1em 1em;
+        }
+
+        .booking-info {
+            font-size: 1.25em;
+            line-height: 1;
+            text-align: left;
+            color: #323232;
+            margin: 2em 0;
+        }
+
+        .about-stay {
+            font-size: 1em;
+            line-height: 1.25;
+            letter-spacing: 1.8px;
+            text-align: left;
+            color: #c7904c;
+            border-top: solid 1px #979797;
+            border-bottom: solid 1px #979797;
+            padding: 1.25em 0;
+            display: inline-block;
+            margin-top: 2em;
+        }
+
+        .date {
+            margin: .6em 0;
+        }
+
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: white;
+        }
+
+        .earning-wrap {
+            font-size: 1.25em;
+            border-radius: 2px;
+            background-color: #f2f2f2;
+            padding: .75em 0;
+            margin: 0 1em .5em 1em;
+        }
+
+        .logo {
+            /*width: 10%;*/
+            margin-left: 1em;
+        }
+
+        .earning {
+            /*  width: 25%;*/
+            /*font-size: 1.25em;*/
+            line-height: 2;
+            text-align: left;
+            color: #323232;
+            padding: 0 1em;
+        }
+
+        .earning-value {
+            /*width: 35%;*/
+            /*font-size: 1.25em;*/
+            line-height: 2.5;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #323232;
+            padding: 0 1em;
+        }
+
+        .tic {
+            /*width: 25%;*/
+            border-right: solid 1px #c3c3c3;
+        }
+
+        /*.btn-wrap{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}*/
+
+        .row-eq-height {
+            display: flex;
+        }
+
+        .btn-wrap {
+            /*padding: 0 0.5em;*/
+        }
+
+        .view-btn {
+            width: 45%;
+        }
+
+        .action-btn {
+            color: #c7904c;
+            border-color: #c7904c;
+            background-color: white;
+            box-shadow: none;
+            border: solid 1px #c7904c;
+            margin: 1.5em 0;
+            /*margin: 0.5em .8em;
+     width: 100%; */
+        }
+
+        .print-btn {
+            width: 32%;
+            margin-left: 1.8%;
+        }
+
+        .help-btn {
+            width: 18%;
+        }
+
+        /*second part ends*/
+
+        /*third part starts*/
+
+        body {
+            background-image: url("assets/background.jpg");
+            background-repeat: repeat;
+        }
+
+        /*  .green{
+        background-color: green;
+    }*/
+
+        /*     .blue{
+        background-color: blue;
+    }*/
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .gray {
+            /*background-color: gray;*/
+            position: relative;
+        }
+
+        /*      .height{
+        height: 100px;
+    }*/
+
+        .ele-wrap {
+            overflow-x: auto;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .ele-wrap .col-md-3 {
+            display: inline-block;
+            float: none;
+        }
+
+        .img-set {
+            width: 100%;
+        }
+
+        #left-button,
+        #leftButton {
+            position: absolute;
+            bottom: 1.5em;
+            left: 0;
+            background-color: white;
+            opacity: .5;
+            z-index: 10;
+            top: 12em;
+            display: flex;
+            align-items: center;
+
+        }
+
+        #right-button,
+        #rightButton {
+            position: absolute;
+            bottom: 1.5em;
+            right: 0;
+            background-color: white;
+            opacity: .5;
+            z-index: 10;
+            top: 12em;
+            display: flex;
+            align-items: center;
+        }
+        .panel{
+            box-shadow: 0 11px 12px 0 rgba(0, 0, 0, 0.05);
+        }
+        .panel .panel-footer {
+            background-color: white;
+        }
+
+        .panel .panel-heading {
+            font-size: 1em;
+            line-height: 0.89;
+            text-align: center;
+            color: #323232;
+            background-color: white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .panel .panel-footer .card-name {
+            font-size: 25px;
+            line-height: 1;
+            text-align: left;
+            color: #323232;
+            padding: 1em 0 0.6em 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .place {
+            font-size: 16px;
+            line-height: 1;
+            text-align: left;
+            color: #9b9b9b;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .panel .panel-footer .details {
+            margin: 0 1em;
+            background-color: #d39851;
+            color: white;
+        }
+
+        .about {
+            font-size: 1em;
+            line-height: 2.5;
+            text-align: center;
+            color: #323232;
+            margin-right: 1em;
+        }
+
+        .panel .panel-footer .row {
+            padding-top: 1.25em;
+        }
+
+        /*third part ends*/
+
+        /*fourth part starts*/
+
+        .earn-logo {
+            /* height: 10px; */
+width: 25px;
+        }
+        .earnings-head{
+            padding-left: 15px;
+        }
+        .events-in-taj {
+            padding-left: 15px;
+        }
+
+        .scroll-parent-prop {
+            overflow-x: auto;
+            white-space: nowrap;
+            position: relative;
+            width: 85%;
+            margin-left: 8%;
+        }
+
+        .scroll-child-prop {
+            display: inline-block;
+            float: none;
+        }
+
+        #leftButton,
+        #rightButton {
+            top: 0em;
+        }
+
+        .layer {
+            position: relative;
+        }
+
+        .smp {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 9;
+            /*background-color: green;*/
+        }
+
+        .earning-card-heading,
+        .earning-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .details {
+            background-color: #d39851;
+            color: white;
+        }
+
+        .chevron-right,
+        .chevron-left {
+            font-size: 30px;
+        }
+
+        /*fourth part ends*/
+
+        /*fifth part starts*/
+
+        .voucher-img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .voucher-body {
+            padding: 2em 0 1em 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+        }
+
+        .voucher-wrap {
+            margin-top: 1em;
+            box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.05);
+            background-color: white;
+            display: flex;
+        }
+
+        .voucher-detail {
+            font-size: 30px;
+            line-height: 1;
+            letter-spacing: -1px;
+            text-align: left;
+            color: #323232;
+
+        }
+
+        .voucher-valid {
+            font-size: 16px;
+            line-height: 1;
+            text-align: left;
+            color: #9b9b9b;
+            padding: 0.7em 0 1.5em 0;
+        }
+
+        .voucher-valid-places {
+            font-size: 14px;
+            text-align: left;
+            color: #9b9b9b;
+        }
+
+        .voucher-use {
+            background-color: #d39851;
+            color: white;
+            margin-right: 2em;
+        }
+
+        .user-voucher {
+            padding-bottom: 1em;
+        }
+
+        /*fifth part ends*/
+
+        @media only screen and (max-width: 1200px) {
+            /*fifth part starts*/
+            .voucher-body {
+                padding: 1.5em 0 1em 3em;
+            }
+            .voucher-detail {
+                font-size: 2em;
+            }
+            .voucher-valid {
+                font-size: 1em;
+                padding: 0.5em 0 .8em 0;
+            }
+            .voucher-valid-places {
+                font-size: .75em;
+            }
+            /*fifth part ends*/
+        }
+
+        @media only screen and (max-width: 991px) {
+            /*second part starts*/
+            .view-btn {
+                width: 60%;
+            }
+            .print-btn {
+                width: 15%;
+                margin-left: 4%;
+            }
+            .help-btn {
+                width: 15%;
+            }
+            .earning-value-wrap {
+                padding-top: 1em 0;
+            }
+            /*second part ends*/
+            /*fourth part starts*/
+            .scroll-parent-prop {
+                width: 100%;
+                margin: 0%;
+            }
+
+            /*fourth part ends*/
+            /*fifth part starts*/
+            .voucher-body {
+                padding: 1.5em 0 1em 1.5em;
+            }
+            .voucher-detail {
+                font-size: 1.5em;
+            }
+            .voucher-valid {
+                font-size: .85em;
+            }
+            /*fifth part ends*/
+        }
+
+        @media only screen and (min-width:991px) {
+            /*fourth part starts*/
+            #rightButton,
+            #leftButton {
+                display: none;
+            }
+            /*fourth part ends*/
+        }
+
+        @media only screen and (max-width: 767px) {
+            /*second part starts*/
+            .row-eq-height {
+                display: block;
+            }
+            .print-btn {
+                /*width: 15%;*/
+                margin-left: 4%;
+            }
+            /*second part ends*/
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            var $item = $('.carousel .item');
+            var $wHeight = $(window).height();
+            $item.eq(0).addClass('active');
+            $item.height($wHeight);
+            $item.addClass('full-screen');
+
+            $('#myCarousel').carousel({
+                interval: false,
+                // cycle: true
+            });
+
+            $('.carousel img').each(function () {
+                var $src = $(this).attr('src');
+                var $color = $(this).attr('data-color');
+                $(this).parent().css({
+                    'background-image': 'url(' + $src + ')',
+                    'background-color': $color
+                });
+                $(this).remove();
+            });
+
+            $(window).on('resize', function () {
+                $wHeight = $(window).height();
+                $item.height($wHeight);
+            });
+        });
+        // carousel ends///
+        // scroll starts
+        $(document).ready(function () {
+            var setInvisible = function (elem) {
+                elem.css('visibility', 'hidden');
+            };
+            var setVisible = function (elem) {
+                elem.css('visibility', 'visible');
+            };
+            $('#right-button').click(function () {
+                console.log("hai");
+                var leftPos = series.scrollLeft;
+                console.log(series.scrollLeft);
+                console.log(leftPos);
+
+                $(series).animate({
+                    scrollLeft: leftPos - 400
+                }, function () {
+                    if ($('#series').scrollLeft <= 0) {
+                    }
+                });
+            });
+
+            $('#left-button').click(function () {
+                var leftPos = series.scrollLeft;
+                $(series).animate({
+                    scrollLeft: leftPos + 400
+                });
+            });
+
+        });
+        // scroll ends
+        // fourth part starts
+        $(document).ready(function () {
+            var setInvisible = function (elem) {
+                elem.css('visibility', 'hidden');
+            };
+            var setVisible = function (elem) {
+                elem.css('visibility', 'visible');
+            };
+            $('#rightButton').click(function () {
+                console.log("hai");
+                var leftPos = earningCard.scrollLeft;
+                console.log(earningCard.scrollLeft);
+                console.log(leftPos);
+
+                $(earningCard).animate({
+                    scrollLeft: leftPos - 400
+                }, function () {
+                    if ($('#earningCard').scrollLeft <= 0) {
+                    }
+                });
+            });
+
+            $('#leftButton').click(function () {
+                var leftPos = earningCard.scrollLeft;
+                $(earningCard).animate({
+                    scrollLeft: leftPos + 400
+                });
+            });
+        });
+        // fourth part ends
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar white remove-magin-bottom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <img src="assets/hamburger_menu.png">
+                </button>
+                <img src="assets/taj_inner_circle.png">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a class="active-text-color" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color" href="#">Redeem TIC</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color" href="#">Membership Benefits</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color" href="#">Events</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item">
+                <img src="assets/carousel_1.png" alt="First Image">
+                <div class="outer-flex">
+                    <div class="container">
+                        <div class="title-styling">BRING ON THE SUNSHINE!</div>
+                        <div class="subtitle-styling">Plan a refershing summer for your family with our handpicked getaways at cool, exotic and sun-soaked
+                            locales
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators overide-default-props-carousel">
+                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#mycarousel" data-slide-to="1"></li>
+                            <li data-target="#mycarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="subtitle-styling">Dal view, Srinagar</div>
+                        <div class="locationtext-styling">VIVANTA BY TAJ</div>
+                        <div class="locationtext-styling location-text-margin">BEST SEASON TO VISIT DAL LAKE</div>
+                        <div class="container row">
+                            <div class="col-md-4 box-styling">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img id="sunimage" src="assets/sun.png" />
+                                    </div>
+                                    <div class="col-md-4 locationtext-styling">
+                                        19
+                                        <sup>o</sup>C
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img id="infoimage" src="assets/info.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-offset-2 box-styling">
+                                <div class="row vertically-center">
+                                    <div class="col-md-8 subtitle-styling explore-taj-text">
+                                        Three Family getaway experiences with your current points
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-warning">EXPLORE TAJ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/carousel_1.png" alt="First Image">
+                <div class="outer-flex">
+                    <div class="container">
+                        <div class="title-styling">BRING ON THE SUNSHINE!</div>
+                        <div class="subtitle-styling">Plan a refershing summer for your family with our handpicked getaways at cool, exotic and sun-soaked
+                            locales
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators overide-default-props-carousel">
+                            <li data-target="#mycarousel" data-slide-to="0"></li>
+                            <li data-target="#mycarousel" data-slide-to="1" class="active"></li>
+                            <li data-target="#mycarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="subtitle-styling">Dal view, Srinagar</div>
+                        <div class="locationtext-styling">VIVANTA BY TAJ</div>
+                        <div class="locationtext-styling location-text-margin">BEST SEASON TO VISIT DAL LAKE</div>
+                        <div class="container row">
+                            <div class="col-md-4 box-styling">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img id="sunimage" src="assets/sun.png" />
+                                    </div>
+                                    <div class="col-md-4 locationtext-styling">
+                                        19
+                                        <sup>o</sup>C
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img id="infoimage" src="assets/info.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-offset-2 box-styling">
+                                <div class="row vertically-center">
+                                    <div class="col-md-8 subtitle-styling explore-taj-text">
+                                        Three Family getaway experiences with your current points
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-warning">EXPLORE TAJ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/carousel_1.png" alt="First Image">
+                <div class="outer-flex">
+                    <div class="container">
+                        <div class="title-styling">BRING ON THE SUNSHINE!</div>
+                        <div class="subtitle-styling">Plan a refershing summer for your family with our handpicked getaways at cool, exotic and sun-soaked
+                            locales
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators overide-default-props-carousel">
+                            <li data-target="#mycarousel" data-slide-to="0"></li>
+                            <li data-target="#mycarousel" data-slide-to="1"></li>
+                            <li data-target="#mycarousel" data-slide-to="2" class="active"></li>
+                        </ol>
+                        <div class="subtitle-styling">Dal view, Srinagar</div>
+                        <div class="locationtext-styling">VIVANTA BY TAJ</div>
+                        <div class="locationtext-styling location-text-margin">BEST SEASON TO VISIT DAL LAKE</div>
+                        <div class="container row">
+                            <div class="col-md-4 box-styling">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img id="sunimage" src="assets/sun.png" />
+                                    </div>
+                                    <div class="col-md-4 locationtext-styling">
+                                        19
+                                        <sup>o</sup>C
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img id="infoimage" src="assets/info.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-offset-2 box-styling">
+                                <div class="row vertically-center">
+                                    <div class="col-md-8 subtitle-styling explore-taj-text">
+                                        Three Family getaway experiences with your current points
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-warning">EXPLORE TAJ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid card-container">
+        <div class="row card-head-wrap" style="margin-top:95px;">
+            <span class="text-uppercase col-sm-10 col-sm-offset-1 card-head">Your last stay</span>
+        </div>
+
+        <div class="row ">
+            <div class="col-sm-1" id="elem1"></div>
+            <div class="col-sm-10 card-holder">
+                <div class="row row-eq-height">
+                    <div class="col-sm-6 no-padding">
+                        <img src="assets/hotel.png " class="full-width taj-umaid-pic">
+                    </div>
+                    <div class="col-sm-6 content-wrap">
+                        <div class="booking-info-wrap">
+                            <div class="text-uppercase umaid ">Taj Umaid Bhavan</div>
+                            <div class="booking-info">
+                                <div>
+                                    Executive suite for 2 guests
+                                </div>
+                                <div class="date">
+                                    21
+                                    <sup>st</sup> - 22
+                                    <sup>nd</sup> Mar 2017
+                                </div>
+                            </div>
+                            <div>
+                                <span class="about-stay">
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    TELL US HOW WAS YOUR STAY ?
+                                </span>
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <div class="earning-wrap">
+                                <span>
+                                    <img class="earn-logo" src="assets/page-1.png">
+                                    <span class="earning">Earnings</span>
+                                </span>
+                                <span>
+
+                                    <span class="earning-value tic">+500 TIC </span>
+                                    <span class="earning-value"> +100 Epicure</span>
+                                </span>
+                            </div>
+                            <div class="row earning-wrap">
+                                <div class="col-md-5">
+                                    <div class="row">
+                                        <div class="col-xs-4 no-padding">
+                                            <img src="assets/page-1.png">
+                                        </div>
+                                        <div class="col-xs-8 earning">
+                                            Earnings
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="row earning-value-wrap">
+                                        <div class="col-xs-6 earning-value tic no-padding">+500 TIC </div>
+                                        <div class="col-xs-6 earning-value">+100 Epicure </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" btn-wrap">
+                                <a href="#" class="btn btn-default action-btn view-btn " role="button">VIEW POINT BREAKUP</a>
+                                <a href="#" class="btn btn-default action-btn print-btn" role="button">
+                                    <span class="hidden-sm hidden-xs">PRINT INVOICE</span>
+                                    <span class="glyphicon glyphicon-print hidden-md hidden-lg"></span>
+                                </a>
+                                <a href="#" class="btn btn-default action-btn help-btn pull-right" role="button">
+                                    <span class="hidden-sm hidden-xs">HELP</span>
+                                    <span class="glyphicon glyphicon-question-sign hidden-md hidden-lg"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- second part ends -->
+    <!-- third part staerts -->
+    <div class="container-fluid gray">
+        <div class="row card-head-wrap">
+            <div class="col-sm-10 col-sm-offset-1 card-head">
+                <span class="events-in-taj"> AT TAJ THIS MONTH </span>
+            </div>
+        </div>
+        <div id="left-button" class="col-md-1 text-center">
+            <a>
+                <img src="assets/left.png">
+            </a>
+        </div>
+
+        <div class="row ele-wrap" id="series">
+
+            <div class="col-md-3  col-xs-10 col-sm-5 col-sm-offset-1">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <img src="assets/noun1.png"> Friday, 11th August 2017 - 8.00pm</div>
+                    <div class="panel-body">
+                        <img src="assets/food.png" class="img-set">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="card-name">Gourmet Night </div>
+                        <div class="place">at Graze, Vivanta by Taj, MG road</div>
+                        <div class="row">
+                            <div class="pull-left">
+                                <a href="#" class="btn details " role="button">VIEW DETAILS</a>
+                            </div>
+                            <div class="pull-right about no-padding">
+                                2 tickets left
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-10 col-sm-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <img src="assets/group.png"> 20% discount when using points</div>
+                    <div class="panel-body">
+                        <img src="assets/malish.png" class="img-set">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="card-name">Pahalwan Malish</div>
+                        <div class="place">at Graze, Vivanta by Taj, MG road</div>
+                        <div class="row">
+                            <div class="pull-left">
+                                <a href="#" class="btn details " role="button">VIEW DETAILS</a>
+                            </div>
+                            <div class="pull-right about no-padding text-left">
+                                Valid till 09/09/2017
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3  col-xs-10 col-sm-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <img src="assets/noun1.png"> Friday, 11th August 2017 - 8.00pm</div>
+                    <div class="panel-body">
+                        <img src="assets/bitmap.png" class="img-set">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="card-name">Gourmet Night </div>
+                        <div class="place">at Graze, Vivanta by Taj, MG road</div>
+                        <div class="row">
+                            <div class="pull-left">
+                                <a href="#" class="btn details " role="button">VIEW DETAILS</a>
+                            </div>
+                            <div class="pull-right about">
+                                2 tickets left
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3  col-xs-10 col-sm-5">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <img src="assets/noun1.png"> Friday, 11th August 2017 - 8.00pm</div>
+                    <div class="panel-body">
+                        <img src="assets/food.png" class="img-set">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="card-name">Gourmet Night </div>
+                        <div class="place">at Graze, Vivanta by Taj, MG road</div>
+                        <div class="row">
+                            <div class="pull-left">
+                                <a href="#" class="btn details " role="button">VIEW DETAILS</a>
+                            </div>
+                            <div class="pull-right about no-padding">
+                                2 tickets left
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-5 col-xs-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <img src="assets/group.png"> 20% discount when using points</div>
+                    <div class="panel-body">
+                        <img src="assets/malish.png" class="img-set">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="card-name">Pahalwan Malish</div>
+                        <div class="place">at Graze, Vivanta by Taj, MG road</div>
+                        <div class="row">
+                            <div class="pull-left">
+                                <a href="#" class="btn details " role="button">VIEW DETAILS</a>
+                            </div>
+                            <div class="pull-right about no-padding text-left">
+                                Valid till 09/09/2017
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-5 col-xs-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <img src="assets/noun1.png"> Friday, 11th August 2017 - 8.00pm</div>
+                    <div class="panel-body">
+                        <img src="assets/bitmap.png" class="img-set">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="card-name">Gourmet Night </div>
+                        <div class="place">at Graze, Vivanta by Taj, MG road</div>
+                        <div class="row">
+                            <div class="pull-left">
+                                <a href="#" class="btn details " role="button">VIEW DETAILS</a>
+                            </div>
+                            <div class="pull-right about">
+                                2 tickets left
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="right-button" class="col-md-1 text-center">
+            <a>
+                <img src="assets/right.png">
+            </a>
+        </div>
+    </div>
+    <!-- third part ends -->
+    <!-- fourth part starts -->
+    <div class="container-fluid">
+        <div class="row card-head-wrap">
+            <div class="col-sm-10 col-sm-offset-1 card-head">
+                <span class="earnings-head">EARNINGS CALCULATOR</span>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid layer no-padding">
+            <div class="row smp"></div>
+            <div id="leftButton" class="col-md-1 text-center">
+                <a>
+                    <img src="assets/left.png">
+                </a>
+            </div>
+
+            <div class="row scroll-parent-prop " id="earningCard">
+
+                <div class="col-xs-10 col-sm-5 col-md-4 col-xs-10s-offset-1 scroll-child-prop">
+                    <div class="panel">
+                        <div class="panel-heading earning-card-heading">
+                            <span>
+                                <img class="earn-logo" src="assets/page-1.png">
+                                <span class="earning">Earnings</span>
+                            </span>
+                            <span>
+
+                                <span class="earning-value tic">+500 TIC </span>
+                                <span class="earning-value"> +100 Epicure</span>
+                            </span>
+                        </div>
+                        <div class="panel-body">
+                            <img src="assets/pic1.png" class="img-set">
+                        </div>
+                        <div class="panel-footer">
+                            <div class="card-name">Vivanta by Taj - Holiday Village </div>
+                            <div class="place">Sinquerim, Candolim Goa</div>
+                            <div class="row">
+                                <div class="pull-left">
+                                    <a href="#" class="btn  btn-default details " role="button">VIEW DETAILS</a>
+                                </div>
+                                <div class="pull-right about no-padding">
+                                    Executive Room
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-sm-5 col-md-4 scroll-child-prop">
+                    <div class="panel">
+                        <div class="panel-heading earning-card-heading">
+                            <span>
+                                <img class="earn-logo" src="assets/page-1.png">
+                                <span class="earning">Earnings</span>
+                            </span>
+                            <span>
+                                <span class="earning-value tic">+500 TIC </span>
+                                <span class="earning-value"> +100 Epicure</span>
+                            </span>
+                        </div>
+                        <div class="panel-body">
+                            <img src="assets/pic2.png" class="img-set">
+                        </div>
+                        <div class="panel-footer">
+                            <div class="card-name">Vivanta by Taj - Fort Aguada </div>
+                            <div class="place">Sinquerim Candolim, Bardez Goa</div>
+                            <div class="row">
+                                <div class="pull-left">
+                                    <a href="#" class="btn  btn-default details " role="button">VIEW DETAILS</a>
+                                </div>
+                                <div class="pull-right about no-padding">
+                                    Executive Room
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-sm-5 col-md-4 scroll-child-prop">
+                    <div class="panel">
+                        <div class="panel-heading earning-card-heading">
+                            <span>
+                                <img class="earn-logo" src="assets/page-1.png">
+                                <span class="earning">Earnings</span>
+                            </span>
+
+                            <span>
+                                <span class="earning-value tic">+500 TIC </span>
+                                <span class="earning-value"> +100 Epicure</span>
+                            </span>
+                        </div>
+                        <div class="panel-body">
+                            <img src="assets/pic3.png" class="img-set">
+                        </div>
+                        <div class="panel-footer">
+                            <div class="card-name">Vivanta by Taj - Panaji</div>
+                            <div class="place">OFF DB Bandodkar Road</div>
+                            <div class="row">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default details " role="button">VIEW DETAILS</a>
+                                </div>
+                                <div class="pull-right about no-padding">
+                                    Executive Room
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div id="rightButton" class="col-md-1 text-center">
+                <a>
+                    <img src="assets/right.png">
+                </a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- fourth part ends  -->
+    <!-- fifth part starts -->
+    <div class="container-fluid  hidden-xs">
+        <div class="row card-head-wrap">
+            <div class="col-sm-10 col-sm-offset-1 card-head">
+                <div class="row">
+                    <div class="col-sm-6 heading text-uppercase">
+                        <span> Vouchers</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="#" class="btn btn-default action-btn pull-right">VIEW ALL VOUCHERS</a>
+                    </div>
+                </div>
+                <div class="row voucher-wrap">
+                    <div class="col-sm-5">
+                        <img src="assets/voucher.png" class="voucher-img">
+                    </div>
+                    <div class="col-sm-7 voucher-body">
+                        <div>
+                            <div class="voucher-detail">Earn 50% as epicure points on dining</div>
+                            <div class="voucher-valid">This voucher is about to expire-Valid till 11/08/2017</div>
+                        </div>
+                        <div>
+                            <div class="user-voucher">
+                                <span>
+                                    <a href="" class="voucher-use btn ">USE</a>
+                                </span>
+                                <samp>
+                                    <img src="assets/group-12.png">
+                                </samp>
+                                <span>2 Vouchers remaining</span>
+                            </div>
+                            <div class="voucher-valid-places">This voucher is about to expire-Valid till 11/08/2017</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fifth part ends -->
+
+</body>
+
+</html>

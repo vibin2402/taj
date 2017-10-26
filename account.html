@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <style>
+        .navbar-height {
+            height: 80px;
+        }
+
+        .remove-magin-bottom {
+            margin-bottom: 0;
+        }
+
+        .background-white {
+            background: white;
+        }
+
+        .display-flex {
+            display: flex;
+        }
+
+        .flex-vertical-center {
+            align-self: center;
+        }
+
+        .navbar-height {
+            height: 80px;
+        }
+
+        .taj-logo-size {
+            height: 40px;
+            width: 63px;
+        }
+
+        .nav-bar-item-font-size {
+            font-size: 16px;
+        }
+
+        .nav-bar-right-margin {
+            margin-right: 220px;
+        }
+
+        .horizontal-dotted-line {
+            border-bottom: 0.5px dotted white;
+            width: 100%;
+        }
+
+        body {
+            background-image: url("assets/background.jpg");
+            background-repeat: repeat;
+        }
+
+        .page-content-style {
+            margin-top: 140px;
+            margin-bottom: 100px
+        }
+
+        .remove-padding-left {
+            padding-left: 0;
+        }
+
+        .action-button {
+            color: #d29851;
+            font-size: 14px;
+            border: 1px solid #d29851;
+            padding: 8px;
+            display: inline-block;
+
+        }
+
+        .logout-button-position {
+            position: absolute;
+            top: 30px;
+            right: 30px
+        }
+
+        .full-height {
+            height: 100%
+        }
+
+        .account-name-styling {
+            margin-top: 30px;
+            font-size: 35px;
+        }
+
+        .member-id {
+            font-size: 20px;
+            color: #9b9b9b;
+            margin-top: 20px
+        }
+
+        .change-password-margin {
+            margin-top: 30px;
+        }
+
+        .divider {
+            margin-right: 30px;
+            background-color: #979797;
+            height: 1px;
+            margin-top: 30px
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 25px;
+        }
+
+        .pencil-icon {
+            float: right;
+            margin-right: 30px
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar white remove-magin-bottom background-white display-flex navbar-height">
+        <div class="container flex-vertical-center">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <img src="assets/hamburger_menu.png">
+                </button>
+                <img src="assets/taj_inner_circle.png">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a class="active-text-color nav-bar-item-font-size" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color nav-bar-item-font-size" href="#">Redeem TIC</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color nav-bar-item-font-size" href="#">Membership Benefits</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color nav-bar-item-font-size" href="#">Events</a>
+                    </li>
+                    <li>
+                        <a class="inactive-text-color nav-bar-item-font-size nav-bar-right-margin" href="#">Help</a>
+                    </li>
+                    <li>
+                        <div style="flex-direction: column;width:200px;height:200px;background:black;z-index:9;position:absolute;right:0;top:0;margin-top:-15px;display:flex">
+
+                            <div style="height:62px;display:flex;width:100%;justify-content:center">
+                                <img style="align-self:center" src="assets/page-1.png" />
+                                <div style="font-size:18px;color:white;align-self:center;margin-left:14px"> Platinum</div>
+                            </div>
+
+                            <div class="horizontal-dotted-line"></div>
+
+                            <div style="margin-top:16px">
+                                <div style="font-size:17px;color:white;float:left;margin-left:20px">
+                                    TIC
+                                </div>
+                                <div style="font-size:17px;color:white;float:right;margin-right:20px">
+                                    36,328
+                                </div>
+                            </div>
+
+                            <div style="margin-top:10px">
+                                <div style="font-size:17px;color:white;float:left;margin-left:20px">
+                                    Epicure
+                                </div>
+                                <div style="font-size:17px;color:white;float:right;margin-right:20px">
+                                    12,998
+                                </div>
+                            </div>
+
+                            <button style="margin-top:14px;margin-left:20px;margin-right:20px" type="button" class="btn btn-warning">POINT SUMMARY</button>
+
+                        </div>
+                    </li>
+
+                    <li style="margin-left:60px">
+                        <img src="assets/profile_image.png" class="img-circle" alt="Cinque Terre" width="40" height="40">
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="col-md-10 col-md-offset-1 page-content-style">
+        <div class="row background-white">
+            <div class="col-md-4 remove-padding-left">
+                <img class="full-height" src="assets/full_profile.png">
+                <img>
+            </div>
+            <div class="action-button logout-button-position">
+                LOGOUT
+            </div>
+            <div class="col-md-8">
+                <div class="account-name-styling">Mr. Lakshyaraj Singh</div>
+                <div class="member-id">Membership ID- 0093 0382 0838</div>
+                <div class="change-password-margin action-button">
+                    CHANGE PASSWORD
+                </div>
+                <div class="divider">
+                </div>
+                <div class="contact-info">
+                    Contact Information
+                    <img class="pencil-icon" src="assets/pencil.png">
+                    <img>
+                </div>
+                <div class="row" style="margin-top:30px">
+                    <div class="col-md-6">
+                        <div style="font-size:14px;color:#9b9b9b;margin-bottom:10px">
+                            MOBILE NUMBER
+                        </div>
+                        <div style="font-size:16px;color:#4a4a4a">
+                            9902890824
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="font-size:14px;color:#9b9b9b;margin-bottom:10px">
+                            EMAIL ID
+                        </div>
+                        <div style="font-size:16px;color:#4a4a4a">
+                            lakshyaraj.singh@gmail.com
+                        </div>
+                    </div>
+
+                </div>
+                <div style="font-size:14px;color:#9b9b9b;margin-bottom:10px;margin-top:30px">
+                    COMMUNICATION ADDRESS
+                </div>
+                <div style="font-size:16px;color:#4a4a4a">
+                    The City Palace, Jaipur-302002, Rajasthan, India
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="background-color:white;margin-top:30px;padding-left:60px;padding-right:60px">
+            <div style="font-size:25px;margin-top:50px">
+                Family
+                <img style="float:right;" src="assets/pencil.png">
+                <img>
+            </div>
+            <div class="row" style="margin-top:30px">
+                <div class="col-md-6" style="display:flex;flex-direction:row">
+                    <img src="assets/family_1.png" style="width:90px;height:110px"></img>
+                    <div style="margin-left:20px">
+                        <div style="font-size:14px;color:#9b9b9b;margin-top:12px">WIFE</div>
+                        <div style="font-size:20px;color:#000000;margin-top:20px">Mrs. Padmini Devi</div>
+                        <div style="font-size:15px;color:#9b9b9b;margin-top:10px">ID - 0093 0382 0838</div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="display:flex;flex-direction:row">
+                    <img src="assets/family_2.png" style="width:90px;height:110px"></img>
+                    <div style="margin-left:20px">
+                        <div style="font-size:14px;color:#9b9b9b;margin-top:12px">DAUGHTER</div>
+                        <div style="font-size:20px;color:#000000;margin-top:20px">Miss. Nivritti Singh</div>
+                        <div style="font-size:15px;color:#9b9b9b;margin-top:10px">ID - 1123 0382 1850</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px">
+                <div class="col-md-6" style="display:flex;flex-direction:row">
+                    <img src="assets/family_3.png" style="width:90px;height:110px"></img>
+                    <div style="margin-left:20px">
+                        <div style="font-size:14px;color:#9b9b9b;margin-top:12px">SON</div>
+                        <div style="font-size:20px;color:#000000;margin-top:20px">Mr. Madhavrao Singh</div>
+                        <div style="font-size:15px;color:#9b9b9b;margin-top:10px">ID - 1123 0382 1850</div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="display:flex;flex-direction:row">
+                    <div style="width:90px;height:110px;background-color:#f5f5f5"></div>
+                </div>
+            </div>
+
+            <div style="background-color:#979797;height:1px;margin-top:40px">
+            </div>
+
+            <div style="font-size:25px;margin-top:50px">
+                Wishlist
+                <img style="float:right;" src="assets/pencil.png">
+                <img>
+            </div>
+
+            <div style="margin-top:30px;background-color:#f7f7f7;display:flex;flex-direction:row">
+                <img src="assets/palace_image.png" style="height:140px;width:260px"></img>
+                <div style="margin-left:35px;margin-top:35px">
+                    <div style="font-size: 25px;">
+                        Taj Lake Palace
+                    </div>
+                    <div style="display:flex;flex-direction:row;margin-top:20px">
+                        <img src="assets/page-1.png" style="height:34px;width:34px"></img>
+                        <div style="font-size:18px;color:#323232;align-self:center;margin-left:11px">Earnings</div>
+                        <div style="font-size:18px;color:#323232;align-self:center;margin-left:20px;margin-right:10px">+500 TIC</div>
+                        <div style="background-color: #c3c3c3;width:2px;height:20px;align-self:center"></div>
+                        <div style="font-size:18px;color:#323232;align-self:center;margin-left:10px">+100 Epicure</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background-color:#979797;height:1px;margin-top:40px">
+            </div>
+
+            <div style="font-size:25px;margin-top:50px">
+                Special Preferences
+                <img style="float:right;" src="assets/pencil.png">
+                <img>
+            </div>
+
+            <div style="margin-top:30px;background-color:#f7f7f7;display:flex;flex-direction:row;height:60px">
+                <img src="assets/pillow.png" style="height:20px;width:25px;align-self:center;margin-left:30px"></img>
+                <div style="font-size:14px;color:#4a4a4a;align-self:center;margin-left:20px">Require a cervical pillow in order to sleep</div>
+            </div>
+            <div style="margin-top:2px;background-color:#f7f7f7;display:flex;flex-direction:row;height:60px">
+                <img src="assets/oil.png" style="height:24px;width:20px;align-self:center;margin-left:30px"></img>
+                <div style="font-size:14px;color:#4a4a4a;align-self:center;margin-left:22px">Would like Parachute hair oil in my bathing supplies</div>
+            </div>
+
+            <div style="background-color:#979797;height:1px;margin-top:40px">
+            </div>
+
+            <div style="font-size:25px;margin-top:50px">
+                Track service request
+                <img style="float:right;" src="assets/pencil.png">
+                <img>
+            </div>
+
+            <div style="margin-top:30px;background-color:#f7f7f7;display:flex;flex-direction:row;height:50px">
+                <div class="row" style="display:flex;width:100%;margin-left:40px">
+                    <div class="col-md-3" style="align-self:center">
+                        <div style="font-size:15px;color:#4a4a4a">
+                            DATE
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="align-self:center">
+                        <div style="font-size:15px;color:#4a4a4a">
+                            TYPE OF REQUEST
+                        </div>
+                    </div>
+                    <div class="col-md-5" style="align-self:center">
+                        <div style="font-size:15px;color:#4a4a4a">
+                            STATUS
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex;width:100%;height:85px;border:1px solid #f7f7f7;margin-bottom:60px">
+                <div class="row" style="display:flex;width:100%;margin-left:40px">
+                    <div class="col-md-3" style="align-self:center">
+                        <div style="font-size:16px;color:#4a4a4a">
+                            9/4/17
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="align-self:center">
+                        <div style="font-size:16px;color:#4a4a4a">
+                            Card Replacement
+                        </div>
+                        <div style="font-size:13px;color:#868686;margin-top:9px">
+                            Lost my card, I need a new one
+                        </div>
+                    </div>
+                    <div class="col-md-5" style="align-self:center">
+                        <div style="font-size:16px;color:#4a4a4a">
+                            Out of Delivery : ETA Tuesday 09:00am
+                        </div>
+                        <div style="font-size:13px;color:#868686;margin-top:9px">
+                            Description : Lost my card, I need a ne..
+                            <a href="#" style="color:#d29851">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
